@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" standalone='yes'?>
+<SERVERS>
+    <SERVER>
+        <ID>CKXU001</ID>
+        <NAME>CKXU FM Server</NAME>
+        <ACTIVE>1</ACTIVE>
+        <RESOLVE>URL</RESOLVE>
+        <URL>localhost</URL>
+        <IPV4>127.0.0.1</IPV4>
+        <PORT>3306</PORT>
+        <DBTYPE>MySQL</DBTYPE>
+        <DATABASE>CKXU</DATABASE>
+    </SERVER>
+    <SERVER>
+        <ID>CKXU002</ID>
+        <NAME>CKXU Backup Server</NAME>
+        <ACTIVE>1</ACTIVE>
+        <RESOLVE>IPV4</RESOLVE>
+        <URL>ckxuradio.su.uleth.ca</URL>
+        <IPV4>142.66.48.30</IPV4>
+        <PORT>3306</PORT>
+        <DBTYPE>MySQL</DBTYPE>
+        <DATABASE>CKXU</DATABASE>
+    </SERVER>
+    <SERVER>
+        <ID>CJSW001</ID>
+        <NAME>CJSW FAKE</NAME>
+        <ACTIVE>1</ACTIVE>
+        <RESOLVE>URL</RESOLVE>
+        <URL>www.cjsw.com</URL>
+        <IPV4>142.66.48.30</IPV4>
+        <PORT>3306</PORT>
+        <DBTYPE>MySQL</DBTYPE>
+        <DATABASE>CKXU</DATABASE>
+    </SERVER>
+    <SERVER>
+        <ID>CJSW002</ID>
+        <NAME>CJSW TEST</NAME>
+        <ACTIVE>1</ACTIVE>
+        <RESOLVE>URL</RESOLVE>
+        <URL>logs.cjsw.com</URL>
+        <IPV4>142.66.48.30</IPV4>
+        <PORT>3306</PORT>
+        <DBTYPE>MySQL</DBTYPE>
+        <DATABASE>CKXU</DATABASE>
+    </SERVER>
+</SERVERS>
