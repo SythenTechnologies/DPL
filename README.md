@@ -2,7 +2,7 @@ Digital Program Logs
 ===
 Version 0.3
 
-LICENCE
+LICENSE
 ===
 The MIT License (MIT)
 
