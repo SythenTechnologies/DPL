@@ -86,10 +86,6 @@ else{
 }
 $ORIGIN = $_SERVER['HTTP_REFERER'];
 
-if($postpass == "pledge1" && $postuser == "ckxu"){
-	$postpass = "Pledge1";
-}
-
 if(authenticate($postuser, $postpass)){
     if($des==0){
         header('Location: /masterpage.php');
