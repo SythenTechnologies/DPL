@@ -3,60 +3,31 @@
 <head>
 <link rel="stylesheet" type="text/css" href="/phpstyle.css" />
 <title>DPL Administration</title>
+<link href="../js/jquery/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" type="text/css" rel="stylesheet"/>
+    <script src="../TPSBIN/JS/GLOBAL/Utilities.js"></script>
+    <style>
+        .Fill{
+         width: 100%;   
+         text-align: center;
+         margin: 4px 0px 4px 0px;
+        }
+        .hidden-div{
+            display: none;
+        }
+    </style>
 </head>
 <body>
 	<div style="text-align: center; width: 500px; margin: auto;" id="content">
-		<div><img src="/DEV/DevImg.png" align="left"/></div>
+		<div><img src="/DEV/DevImg.png" alt="Dev Login"/></div>
 		<div style="margin: auto;"><form name="login" method="post" action="/Security/Login.php">
-		  <input name="name" placeholder="Username" required = "text"/><br/><!--<label for="user">Username:</label>-->
-		  <input name="pass" placeholder="Password" required type="password"/>
-		  <input type="submit" value="Submit" />
+            <div id="Error" class="ui-state-error ui-corner-all hidden-div"></div>
+            <fieldset>
+		        <input name="name" placeholder="Username" required title="Username" type="text" class="Fill ui-corner-all"/><br/>
+		        <input name="pass" placeholder="Password" required title="Password" class="Fill ui-corner-all" type="password"/>
+		        <input type="submit" value="Login" class="Fill ui-corner-all"/>
+            </fieldset>
 		  <br/><br/><br /> 
-		  <!--<label for="development">Development Site (HTTPS)</label> -->
-		  <!--<input type="button" id="development" name="dev" value="LDAP" onClick="javascript:window.location.href='https://ckxuradio.su.uleth.ca:8000/LDALOGS/LDAP.php'"/>--> 
 		</form></div>
 	</div>
 </body>
 </html>
-
-<!--
-<?php
-include("authenticate.php");
-
-// check to see if user is logging out
-if(isset($_GET['out'])) {
-    // destroy session
-    session_unset();
-    $_SESSION = array();
-    unset($_SESSION['user'],$_SESSION['access']);
-    session_destroy();
-}
-
-// check to see if login form has been submitted
-if(isset($_POST['userLogin'])){
-    // run information through authenticator
-    if(authenticate($_POST['userLogin'],$_POST['userPassword']))
-    {
-        // authentication passed
-        header("Location: index.php");
-        die();
-    } else {
-        // authentication failed
-        $error = 1;
-    }
-}
-
-// output error to user
-if (isset($error)) echo "Login failed: Incorrect user name, password, or rights<br />";
-
-// output logout success
-if (isset($_GET['out'])) echo "Logout successful<br />";
-?>
-
-<form method="post" action="login.php">
-    User: <input type="text" name="userLogin" /><br />
-    Password: <input type="password" name="userPassword" /><br />
-    <input type="submit" name="submit" value="Submit" />
-</form>
-	
--->
