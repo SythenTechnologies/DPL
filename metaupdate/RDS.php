@@ -4,9 +4,9 @@
  
  // Set Time Zone and Local Variables
  	date_default_timezone_set("America/Edmonton");
-	$SERVER = "142.66.48.28"; //Should be static IP at UofL, otherwise use hostname
-	$USER = "IISphpexecute";
-	$RPWCON = "m@t3r1al";
+	$SERVER = "ckxuradio.su.uleth.ca"; //Should be static IP at UofL, otherwise use hostname
+	$USER = "root";
+	$RPWCON = "K1w1679";
 	
 	$StartTime = "00:00:00";
 	$Date = date('Y-m-d'); 
@@ -42,9 +42,9 @@
 	}
 	
 		
-	$serv["host"][] = "174.36.206.217";
+	$serv["host"][] = "50.7.70.66";
 	$serv["port"][] = "8715";
-	$serv["passwd"][] = "omnotheology";
+	$serv["passwd"][] = "K1w1679";
 	$_SESSION['title']= $da;
 	$_SESSION['LastPost']=date("H:i:s");
 	$_SESSION['Inactive']=FALSE;

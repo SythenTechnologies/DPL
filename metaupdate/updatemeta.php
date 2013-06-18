@@ -19,8 +19,8 @@
 	}
     //$da="CKXU 88.3 FM";
 	$SERVER = "ckxuradio.su.uleth.ca";
-	$USER = "IISphpexecute";
-	$RPWCON = "m@t3r1al";
+	$USER = "root";
+	$RPWCON = "K1w1679";
 	$MAXSEARCH = "2";
 	$CONN = mysql_connect($SERVER,$USER,$RPWCON);
 	if($CONN){
@@ -68,7 +68,7 @@
 						{
 							//echo "found";
 							$Arra = mysql_fetch_array($Result);
-							$da = $Arra['title'];
+							$da = $Arra['title'] . " - " . $Arra['Artist'];
 							break;
 						}
 					}
@@ -105,10 +105,14 @@ if($_SESSION['title']==$da && $OVR==FALSE){
 	echo "No New Data, Post Delayed<br/>Last Update:".$_SESSION['LastPost'];
 }
 else{
-		
-	$serv["host"][] = "174.36.206.217";
-	$serv["port"][] = "8715";
-	$serv["passwd"][] = "omnotheology";
+		/*********************************/
+        //
+        // POST TO REMOTE SERVER
+        //
+        //********************************/
+	$serv["host"][] = {"174.36.206.217","142.66.48.28"};
+	$serv["port"][] = {"8715","8715"};
+	$serv["passwd"][] = {"K!w1679","K1w1679"};
 	$_SESSION['title']= $da;
 	$_SESSION['LastPost']=date("H:i:s");
 	$_SESSION['Inactive']=FALSE;
