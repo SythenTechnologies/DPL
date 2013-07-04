@@ -416,10 +416,10 @@ if(false){
             if(ereg("opera", $br)) {
             }
             else if(ereg("chrome", $br)) {
-              echo "<tr><td>
+              /*echo "<tr><td>
               <h3 width=\"100%\" style=\"background-color:yellow; color:black;\"><strong>WARNING: This browser does not support the needed HTML5 forms on Windows<br />
               please launch or download opera that supports these required forms. This does not apply to MAC OS</strong></h3>
-              </td></tr>";
+              </td></tr>";*/
             }
             else if(ereg("safari", $br)) {
               echo "<tr><td>

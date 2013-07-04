@@ -10,9 +10,9 @@ function getBrowser()
          {
              $ub = "Internet Explorer";
          }
-         else if(preg_match('/Firefox/i',$u_agent))
+         else if(preg_match('/Mozilla/i',$u_agent))
          {
-             $ub = "Mozilla Firefox";
+             $ub = "Mozilla";
          }
          else if(preg_match('/Safari/i',$u_agent))
          {
@@ -87,16 +87,16 @@ else{
               //echo 'Browser Supported';
             //    header("location: originalhomepage.php");
             echo "<!-- This browser has been verified to contain FULL SUPPORT for this page -->";
-            	$ACCnew = TRUE;
+            	$ACCnew = FALSE;
 				$ACCold = TRUE;
             }
 			else if (ereg("chrome", $br)) {
-				$ACCnew = TRUE;
-				$ACCold = FALSE;
+				$ACCnew = FALSE;
+				$ACCold = TRUE;
 			}
-			else if (ereg("Mozilla Firefox", $br)){
-				$ACCnew = TRUE;
-				$ACCold = FALSE;
+			else if (getBrowser()=="Mozilla"){//ereg("Mozilla", $br)){
+				$ACCnew = FALSE;
+				$ACCold = TRUE;
 			}
 			else if (ereg("Apple Safari", $br)){
 				$ACCnew = TRUE;
@@ -110,7 +110,7 @@ else{
             /*else if(ereg("chrome", $br)) {
               echo "<!-- This browser has been verified to contain PARTIAL SUPPORT for this page -->";
             }*/
-            else if(getBrowser()=="Mozilla Firefox") {
+            else if(getBrowser()=="Mozilla") {
               echo "<!-- This browser has been verified to contain PARTIAL SUPPORT for this page -->";
 				$ACCnew = TRUE;
 				$ACCold = FALSE;
@@ -126,7 +126,7 @@ else{
         <?php
         	if($ACCold != TRUE){
         		 echo " <!-- ";
-				header("location:/Episode/EPV3/logs.php");
+				//header("location:/Episode/EPV3/logs.php?b=$br");
         	}
         ?>
         <h3>(Version 0.2)</h3><span style="font-size: 9px"><i>works with: Opera</i></span>
@@ -158,7 +158,7 @@ else{
         <tr height="50" valign="middle">
                   <td width="450">
 	            <!--<a href="Episode/p1insertep.php">New Program Log</a>-->
-	            <button onclick="window.location.href='/Episode/EPV3/logs.php'" <?php
+	            <button onclick="window.location.href='/Episode/EPV3/logs.php?ref=1'" <?php
 	            	if($ACCnew != TRUE){
 	            		 echo " disabled ";
 	            	}

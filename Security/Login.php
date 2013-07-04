@@ -98,7 +98,7 @@ if(authenticate($postuser, $postpass)){
 else{
 	//echo "<h3>Login Failed</h3><span><br/>You do not have DNS authenticated access<br/></span>";
 	//header("location: http://ckxuradio.su.uleth.ca/index.php/digital-program-logs?args=LoginFailedCode1");
-	header("Location: $ORIGIN?auth=Access Denied - Invalid Credentials");
+	header("Location: $ORIGIN&auth=Access Denied Invalid Credentials");
 	//echo "Login Failed";
 }
 
